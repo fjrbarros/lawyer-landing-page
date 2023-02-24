@@ -13,6 +13,7 @@ export const ContentBox = styled.div`
   padding-right: 30px;
   @media (max-width: 991px) {
     margin-bottom: 20px;
+    padding-right: 0;
   }
 `;
 
@@ -24,7 +25,9 @@ export const Title = styled.h3`
   }
 `;
 
-export const Paragraph = styled.p``;
+export const Paragraph = styled.p`
+  text-align: justify;
+`;
 
 export const W50 = styled.div`
   min-width: 50%;
@@ -32,4 +35,6 @@ export const W50 = styled.div`
 
 export const Image = styled.img`
   max-width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;

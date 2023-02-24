@@ -23,7 +23,7 @@ export const About = () => (
         </Styles.Paragraph>
       </Styles.ContentBox>
       <Styles.W50>
-        <Styles.Image src="https://www.monderlaw.com/wp-content/uploads/2020/07/types-criminal-lawyer-cases-deal.jpg" />
+        <Styles.Image src="https://www.fvadvogadosassociados.com.br/wp-content/uploads/2019/01/Equipe-1024x457.jpg" />
       </Styles.W50>
     </Styles.Content>
   </Section>
