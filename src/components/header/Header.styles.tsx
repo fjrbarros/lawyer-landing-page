@@ -91,14 +91,19 @@ export const ItemList = styled.li`
   list-style: none;
 `;
 
-export const Menu = styled.a`
+export const Menu = styled.a<{ isStick: boolean }>`
   position: relative;
   display: inline-block;
   margin: 0 15px;
   color: #ffffff;
   font-weight: 500;
+  transition: 0.1s;
   &.stick {
     color: #111;
+  }
+  &:hover {
+    color: ${({ isStick }) => (isStick ? '#111' : '#178ff1')};
+    transform: scale(1.1);
   }
   @media (max-width: 991px) {
     color: #111;

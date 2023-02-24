@@ -44,6 +44,7 @@ export const Header = () => {
                 href={`#${obj.id}`}
                 className={classStick}
                 onClick={handleClick}
+                isStick={isStick}
               >
                 {obj.headerTitle}
               </Styles.Menu>
