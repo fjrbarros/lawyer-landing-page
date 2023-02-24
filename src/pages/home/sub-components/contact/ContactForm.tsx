@@ -31,6 +31,7 @@ export const ContactForm = () => {
     setErrors(_errors);
     if (Object.keys(_errors).length) return;
     const whatsappUrl = mountWhatsappUrl(values);
+    console.log(whatsappUrl);
     window.open(whatsappUrl, '_blank');
     setValues(defaultValues);
   };
