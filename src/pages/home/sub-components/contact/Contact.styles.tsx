@@ -33,9 +33,12 @@ export const Form = styled.form`
 
 export const H3 = styled.h3`
   color: #fff;
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 10px;
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 export const InputBox = styled.div`
@@ -67,15 +70,26 @@ export const TextArea = styled(Input).attrs({ as: 'textarea' })`
   min-height: 200px;
 `;
 
-export const Submit = styled(Input).attrs({ type: 'submit' })`
+export const Submit = styled.button`
   max-width: 50%;
-  background-color: #2196f3;
+  background-color: #25d366;
   cursor: pointer;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 30px;
   margin-left: 50%;
   transform: translate(-50%);
+  & > svg {
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
   @media (max-width: 600px) {
     padding: 8px;
   }

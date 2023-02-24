@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { mountWhatsappUrl } from '../../../../utils/mountWhatsappUrl';
 import { validateContactForm } from '../../../../utils/validateContactForm';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as Styles from './Contact.styles';
 
 export interface IContactForm {
@@ -39,7 +41,7 @@ export const ContactForm = () => {
   return (
     <Styles.FormBox id="contact-form">
       <Styles.Form onSubmit={handleSubmit}>
-        <Styles.H3>Fale com a gente</Styles.H3>
+        <Styles.H3>Fale com a gente pelo Whatsapp</Styles.H3>
         <Styles.InputBox>
           <Styles.Input
             type="text"
@@ -79,7 +81,10 @@ export const ContactForm = () => {
             <Styles.InputError>{errors.message}</Styles.InputError>
           )}
         </Styles.InputBox>
-        <Styles.Submit type="submit" value="Enviar" />
+        <Styles.Submit type="submit">
+          <span>Enviar</span>
+          <FontAwesomeIcon icon={faWhatsapp} />
+        </Styles.Submit>
       </Styles.Form>
     </Styles.FormBox>
   );
