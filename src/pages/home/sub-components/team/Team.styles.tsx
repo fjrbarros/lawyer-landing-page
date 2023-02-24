@@ -17,10 +17,8 @@ export const Content = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 20px;
-  @media (max-width: 991px) {
-    gap: 10px;
-  }
+  margin-top: 80px;
+  gap: 80px 30px;
 `;
 
 export const ImageBox = styled.div`
@@ -61,7 +59,7 @@ export const Details = styled.div`
   text-align: center;
   width: 100%;
   transition: 0.5s;
-  transform: translateY(110px);
+  transform: translateY(50px);
 `;
 
 export const CardTitle = styled.h2`
@@ -80,7 +78,7 @@ export const CardTitle = styled.h2`
 export const CardData = styled.div`
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 40px;
+  margin-bottom: -20px;
 
   & > a {
     font-size: 1.4rem;
@@ -93,22 +91,20 @@ export const CardData = styled.div`
 `;
 
 export const Card = styled.div`
-  position: relative;
-  width: 300px;
-  height: 250px;
-  margin-top: 80px;
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
-  transition: 0.3s;
+  width: 300px;
+  height: 250px;
+  position: relative;
+  transition: 0.4s;
   &:hover {
-    transform: scale(1.1, 1.2);
+    transform: scale(1.1, 1.1);
     ${ImageBox} {
-      width: 180px;
-      height: 180px;
+      width: 170px;
+      height: 170px;
     }
     ${Details} {
-      transform: translateY(75px);
+      transform: translateY(15px);
     }
   }
 `;
