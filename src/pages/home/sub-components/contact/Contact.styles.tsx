@@ -38,10 +38,15 @@ export const H3 = styled.h3`
   margin-bottom: 10px;
 `;
 
-export const Input = styled.input`
+export const InputBox = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Input = styled.input<{ error?: boolean }>`
   padding: 15px;
   font-size: 16px;
-  border: none;
+  border: ${({ error }) => `1px solid ${error ? '#ff2727' : 'transparent'}`};
   outline: none;
   background-color: #222;
   color: #fff;
@@ -49,6 +54,13 @@ export const Input = styled.input`
   &::placeholder {
     color: #999;
   }
+`;
+
+export const InputError = styled.span`
+  color: #ff2727;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-top: 3px;
 `;
 
 export const TextArea = styled(Input).attrs({ as: 'textarea' })`

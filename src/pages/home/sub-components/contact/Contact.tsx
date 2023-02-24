@@ -6,6 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import * as Styles from './Contact.styles';
 import { section } from '../../../../constantes';
+import { ContactForm } from './ContactForm';
 
 export const Contact = () => (
   <Styles.Section id={section.contact.id}>
@@ -48,15 +49,7 @@ export const Contact = () => (
           </Styles.Box>
         </Styles.ContactInfoBox>
       </Styles.ContactInfo>
-      <Styles.FormBox id="contact-form">
-        <Styles.Form onSubmit={e => e.preventDefault()}>
-          <Styles.H3>Fale com a gente</Styles.H3>
-          <Styles.Input type="text" placeholder="Nome completo" />
-          <Styles.Input type="email" placeholder="E-mail" />
-          <Styles.TextArea placeholder="Sua mensagem"></Styles.TextArea>
-          <Styles.Submit type="submit" value="Enviar" />
-        </Styles.Form>
-      </Styles.FormBox>
+      <ContactForm />
     </Styles.Content>
   </Styles.Section>
 );
